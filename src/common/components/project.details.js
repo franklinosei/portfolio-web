@@ -46,7 +46,7 @@ function ProjectDetailsModal(props) {
                 leaveTo="opacity-0 scale-95"
               >
 
-                <Dialog.Panel className="mt-12 lg:mt-0 min-w-[50%] max-w-[50%] min-h-screen bg-[#242430] transform overflow-hidden text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="mt-12 lg:mt-0 md:min-w-[50%] md:max-w-[50%] min-h-screen bg-[#242430] transform overflow-hidden text-left align-middle shadow-xl transition-all">
 
                   <Dialog.Title
                     as="h3"
