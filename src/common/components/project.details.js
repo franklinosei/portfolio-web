@@ -110,10 +110,16 @@ function ProjectDetailsModal(props) {
 
 
                       <div className='flex flex-col mt-4'>
-                        <div className='grid grid-cols-2 text-white'>
-                          <h3>Created By: <span className='text-gray-400'>iamdveloper</span></h3>
 
+                      <div className='grid grid-cols-1 md:grid-cols-2 text-white'>
+                          <h3>Created By: <span className='text-gray-400'>iamdveloper</span></h3>
                           <h3>Client: <span className='text-gray-400'>{ props.project.projectClient}</span> </h3>
+                       </div>
+
+                      <div className='grid grid-cols-2 text-white'>
+                          {/* <h3>Created By: <span className='text-gray-400'>iamdveloper</span></h3>
+
+                          <h3>Client: <span className='text-gray-400'>{ props.project.projectClient}</span> </h3> */}
                        
                           <h3>Start: <span className='text-gray-400'>{formatProjectDate(props.project.projectStartDate)}</span> </h3>
                           <h3>End: <span className='text-gray-400'>{formatProjectDate(props.project.projectEndDate)}</span></h3>
