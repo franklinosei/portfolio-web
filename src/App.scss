@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/////////////// COMPONENTS  /////////////////
+@import "./assets/styles/variables";
+@import "./assets/styles/navbar";
+@import "./assets/styles/misc";
+@import "./assets/styles/sidebar";
+@import "./assets/styles/components/banner";
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+@import 'react-toastify/dist/ReactToastify.css';
+
+
+////// PAGES ///////
+@import "./assets/styles/home";
+
+
+
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+
+* {
+    font-family: 'Source Code Pro', monospace;
+}
+
+
+
+/* Works on Firefox */
+// * {
+//     scrollbar-width: thin;
+//     scrollbar-color: blue orange;
+// }
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $primary-color;
+    border-radius: 20px;
+    border: 1px solid $primary-color;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }

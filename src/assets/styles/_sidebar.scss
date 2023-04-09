@@ -1,0 +1,230 @@
+/* Sidebar */
+
+@import "./variables";
+
+.sidebar {
+    position: fixed;
+    // min-height: calc(100vh - #{$navbar-height});
+
+
+    min-height: 100vh;
+    max-height: 100vh;
+    background: $sidebar-bg;
+    font-weight: normal;
+    padding: 0;
+    width: $sidebar-width-lg;
+    z-index: 11;
+    transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+    -webkit-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+    -moz-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+    -ms-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+
+
+    .sidebar-brand-wrapper {
+        transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+        -webkit-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+        -moz-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+        -ms-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+
+        background: $sidebar-bg;
+        width: $sidebar-width-lg;
+        height: $navbar-height;
+
+        @media (max-width: 991px) {
+            width: 55px;
+
+        }
+
+
+    }
+
+    .sidebar-profile {
+        background-color: #191923;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            font-size: 10px;
+            color: rgb(194, 194, 194);
+        }
+
+        h4 {
+            font-size: 10px;
+            color: rgb(194, 194, 194);
+        }
+
+        border-bottom: 1px solid gray;
+    }
+
+    .socials {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: rgba($page-bg-color, $alpha: 0.8);
+        margin: 0px 10px;
+    }
+
+    
+
+    .nav {
+        overflow: hidden;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        margin-bottom: 60px;
+        // padding-top: $navbar-height ;
+        padding-top: 120px;
+
+        @media (max-width:992px) {
+            padding-top: 0;
+        }
+
+        .nav-item {
+            // @include transition-duration(0.25s);
+            transition-property: background;
+            -webkit-transition-property: background;
+            // padding-right: 20px;
+            padding: 0px;
+            margin: 2px 0px;
+
+            border-top: 1px solid rgba($page-bg-color, $alpha: 0.9);
+            border-bottom: 1px solid rgba($page-bg-color, $alpha: 0.9);
+
+            .collapse {
+                z-index: 999;
+            }
+
+            .nav-link {
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+                padding: $sidebar-menu-padding-y 10px $sidebar-menu-padding-y $sidebar-menu-padding-x;
+                color: $sidebar-menu-color;
+                //   @include transition-duration(0.45s);
+                transition-property: color;
+                -webkit-transition-property: color;
+                height: 46px;
+                // border-radius: 0px 100px 100px 0px;
+                justify-content: center;
+                cursor: pointer;
+
+
+                .menu-title {
+                    color: inherit;
+                    display: inline-block;
+                    font-size: $sidebar-menu-font-size;
+                    line-height: 1;
+                    vertical-align: middle;
+                }
+            }
+
+            &.active {
+                >.nav-link {
+                    background: $sidebar-menu-active-bg;
+                    position: relative;
+
+                    &:before {
+                        content: "";
+                        width: 3px;
+                        height: 100%;
+                        background: white;
+                        display: inline-block;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+
+                    .menu-title {
+                        color: $sidebar-menu-active-color;
+                    }
+
+                    i {
+                        color: #ffffff;
+                    }
+                }
+            }
+
+
+
+            &.sidebar-actions {
+                margin-top: 1rem;
+
+                .nav-link {
+                    border-top: 0;
+                    display: block;
+                    height: auto;
+                }
+
+                &:hover {
+                    background: initial;
+
+                    .nav-link {
+                        color: initial;
+                    }
+                }
+            }
+
+
+
+
+
+            .menu-icon {
+                margin-right: 0.5rem;
+                font-size: 0.8125rem;
+                line-height: 1;
+                background: rgba($text-muted, 0.2);
+                width: 31px;
+                height: 31px;
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #ffffff;
+
+                i {
+                    font-size: 0.875rem;
+                }
+            }
+
+        }
+
+
+
+
+
+        .menu-items {
+            &:nth-child(5n+1) {
+                .nav-link {
+                    .menu-icon {
+                        i {
+                            color: theme-color(primary);
+                        }
+                    }
+                }
+            }
+
+        }
+
+
+
+
+    }
+}
+
+/* style for off-canvas menu*/
+@media screen and (max-width: 991px) {
+    .sidebar-offcanvas {
+        position: fixed;
+        max-height: calc(100vh - #{$navbar-height});
+        top: $navbar-height;
+        bottom: 0;
+        overflow: auto;
+        right: -$sidebar-width-lg;
+        -webkit-transition: all 0.25s ease-out;
+        -o-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+
+        &.active {
+            right: 0;
+        }
+    }
+}
