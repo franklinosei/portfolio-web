@@ -110,7 +110,7 @@ function MySkills() {
                     <div className='text-white text-sm pt-2'>
 
                         <div className='mb-4'>
-                            <h6 className='pb-2 text-gray-400'>Golang(Gin-gonic)</h6>
+                            <h6 className='pb-2 text-gray-400'>Golang</h6>
                             <ProgressBar progress={95} barHeight={"h-[3px]"} barColor={"bg-gradient-to-r from-[#29beb0] to-[#29beb0]"} />
                         </div>
 
