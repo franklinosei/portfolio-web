@@ -56,7 +56,9 @@ function StringCarousel() {
                 {
                     allCategories ?
                     Object.keys(allCategories).sort().map((cat) => (
-                        <button onClick={() => { 
+                        <button 
+                        key={cat}
+                        onClick={() => { 
                             
                             dispatch(setFilteredBlogs(cat))
                             dispatch(setCategory(cat)) 

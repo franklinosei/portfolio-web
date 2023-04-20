@@ -28,7 +28,7 @@ export default function BlogCard(props) {
                         
                             >
                 {/* cover image */}
-                <div className="bg-cover h-[200px] transition ease-in-out delay-100 hover:scale-110 duration-300" style={{ backgroundImage: `url(${props.blog.blogCoverImage})` }}>
+                <div className="bg-cover h-[250px] transition ease-in-out delay-100 hover:scale-110 duration-300" style={{ backgroundImage: `url(${props.blog.blogCoverImage})` }}>
 
                 </div>
 

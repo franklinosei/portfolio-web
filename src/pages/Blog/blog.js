@@ -67,8 +67,8 @@ function Blog() {
 
             :
 
-            filteredBlogs.map(blog => {
-              return <BlogCard blog={blog} />
+            filteredBlogs.map((blog, index) => {
+              return <BlogCard blog={blog} key={index} />
             })
         }
       </div>

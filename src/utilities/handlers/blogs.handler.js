@@ -26,7 +26,7 @@ export async function getAllBlogs(props) {
                 seriesCounts["All"] = response.data.length;
             });
 
-            console.log(seriesCounts)
+            // console.log(seriesCounts)
 
             props.dispatch(setAllCategories(seriesCounts))
 
@@ -45,6 +45,26 @@ export async function getAllBlogs(props) {
         return false
     }
 }
+
+
+export async function getBlogById(props) {
+    try {
+        let response = await axios.get(
+            `${BASE_URL}/blogs/${props.id}`,
+        );
+
+        if (response.status === 200) {
+            const data = response.data;
+            return data
+        }
+
+        return {}
+
+    } catch (err) {
+        console.log(err)
+        // return err.response.data
+    }
+ }
 
 
 export async function getBlogCategories(props) { }
