@@ -7,7 +7,7 @@ function ProjectStack(props) {
       <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
     </svg>
 
-    <span className='text-gray-400'>{props.stack}</span>
+    <span className='text-gray-400 text-sm'>{props.stack}</span>
   </li>
   )
 }

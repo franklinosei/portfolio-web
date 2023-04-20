@@ -6,7 +6,7 @@ function ProjectImages(props) {
         {
             props.images ?
              props.images.map((image) => {
-                return <img src={image} className="mt-4" />
+                return <img src={image} className="mt-4 h-[500px]" />
             }) 
             : <></>
         }
