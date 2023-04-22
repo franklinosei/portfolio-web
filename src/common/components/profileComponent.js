@@ -22,7 +22,7 @@ export default function ProfileComponent() {
             <div className="flex flex-col align-center py-2 bg-slate-900 sidebar-profile">
                 <h4 className="">Franklin Osei</h4>
 
-                <h3 className="">SWE | Data Scientist</h3>
+                <h3 className="">SWE</h3>
             </div>
        
         </div>
